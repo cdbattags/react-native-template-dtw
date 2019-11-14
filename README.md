@@ -1,4 +1,4 @@
-# :space_invader: React Native Template TypeScript
+# :space_invader: React Native Template DTW
 
 <!-- <p>
   <a href="https://travis-ci.org/react-native-community/react-native-template-typescript">
