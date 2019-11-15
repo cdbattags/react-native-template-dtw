@@ -1,29 +1,55 @@
 {
   "name": "HelloDTW",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "start": "react-native start",
+    "ios:sim": "RCT_METRO_PORT=3000 node node_modules/react-native/local-cli/cli.js run-ios --simulator=\"iPhone 11 Pro\"",
+    "link": "node node_modules/react-native/local-cli/cli.js link",
+    "postinstall": "react-native-port-patcher --new-port 3000",
+    "start": "RCT_METRO_PORT=3000 node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
   },
   "dependencies": {
+    "@eva-design/eva": "^1.2.0",
+    "@expo/vector-icons": "^10.0.6",
+    "axios": "^0.19.0",
+    "common-tags": "^1.8.0",
+    "expo-constants": "^7.0.1",
+    "expo-font": "^7.0.0",
+    "lottie-ios": "3.1.3",
+    "lottie-react-native": "^3.2.1",
     "react": "16.9.0",
-    "react-native": "0.61.4"
+    "react-native": "0.61.3",
+    "react-native-gesture-handler": "^1.5.0",
+    "react-native-material-textfield": "^0.16.1",
+    "react-native-radio-buttons": "^1.0.0",
+    "react-native-reanimated": "^1.4.0",
+    "react-native-screens": "^2.0.0-alpha.8",
+    "react-native-sound": "^0.11.0",
+    "react-native-ssh-sftp": "^1.0.3",
+    "react-native-ui-kitten": "^4.2.0",
+    "react-native-unimodules": "^0.6.0",
+    "react-navigation": "^4.0.10",
+    "react-navigation-stack": "^1.10.3",
+    "react-navigation-tabs": "^2.5.6"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
+    "@babel/node": "^7.7.0",
     "@babel/runtime": "^7.6.2",
     "@react-native-community/eslint-config": "^0.0.5",
     "@types/jest": "^24.0.18",
-    "@types/react-native": "^0.60.22",
+    "@types/react-native": "^0.60.21",
     "@types/react-test-renderer": "16.9.0",
     "babel-jest": "^24.9.0",
+    "eslint": "^6.6.0",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
+    "react-native-port-patcher": "^1.0.3",
     "react-test-renderer": "16.9.0",
     "typescript": "^3.6.3"
+  },
+  "resolutions": {
+    "@react-native-community/cli-platform-ios": "2.9.0"
   },
   "jest": {
     "preset": "react-native",
